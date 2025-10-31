@@ -123,6 +123,15 @@ class AuthController extends Controller
                 'email' => $user->usr_email
             ]);
 
+        } catch (\Tymon\JWTAuth\Exceptions\TokenExpiredException $e) {
+            return response()->json(['error' => 'Token expired'], 401);
+
+        } catch (\Tymon\JWTAuth\Exceptions\TokenInvalidException $e) {
+            return response()->json(['error' => 'Token invalid'], 401);
+
+        } catch (\Tymon\JWTAuth\Exceptions\JWTException $e) {
+            return response()->json(['error' => 'Token not provided'], 401);
+
         } catch (\Exception $e) {
             // Catch any other unexpected exceptions to prevent HTTP 500
             return response()->json([
