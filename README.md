@@ -3,7 +3,7 @@
 Prerequisites:
 - PHP (8.2.x or higher)
 - Composer
-- A database server (MySQL)
+- MySQL
 
 Steps:
 1. Clone repository.
