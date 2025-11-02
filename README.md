@@ -15,7 +15,7 @@ Steps:
    - php artisan key:generate
 5. Generate jwt secret key:
    - php artisan jwt:secret
-6. Run migrations & seeders:
+6. Run migrations:
    - php artisan migrate
 7. Serve locally:
    - php artisan serve
