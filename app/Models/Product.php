@@ -62,7 +62,7 @@ class Product extends Model
 
     public function getDeletedAttribute()
     {
-        return $this->attributes['prod_deleted'];
+        return $this->attributes['prod_deleted'] ?? 0;;
     }
 
     public function getCreatedAtAttribute()
